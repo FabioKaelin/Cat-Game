@@ -1,15 +1,40 @@
+Cat-API einbinden
 Katzen Herumfliegen
 HTML aufsetzen
 Highscore speichern
 Punkte zälen
 Punkte aktualisieren
 Start mit [Space]
-Sneaken mit [Arrow down]
-Springen mit [Space]
-Bewegung der Hindernisse
-Hindernisse zeichnen
+Sneak-Event mit [Arrow down]
+Sneaken bei Sneak-Event
+Bei Sneak-Event schneller zu Boden gehen bei Sprung
+Tageszyklus
+Spring-Event mit [Space]
+Springen bei Spring-Event
+Doppelsprung verhindern
+Bewegung eines Blockes
+Verschiedene Büsche zeichnen
+Random Hindernisse erscheinen
+Bewegung auf Hindernisse übertragen
+Bewegung auf Boden übertragen
+Fliegende Hindernisse haben verschiedene Höhen
+Busch zeichnen
+Boden zeichnen
+Maus zeichnen
+Adler zeichnen
+Spatz zeichnen
+Hitboxen erstellen
 Punkte-Boost-Event bei positiven Hindernissen
 Punkte-Boost bei Punkte-Boost-Event
 Sterbe-Event bei negativen Hindernissen
 CSS machen
 Game-Over bei Sterbe-Event
+unendlich Weltengenerierung
+Fliegende Hindernisse
+Stehende Hindernisse
+Restart bei [Space]
+Bei Restart Score Zurücksetzen
+Schneller werden bei höheren Punkten
+Animation hinzufügen
+Hintergrund zeichnen
+Hintergrund Bewegungen
