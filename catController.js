@@ -1,7 +1,55 @@
-const jump = function(){
-    window.alert("Jump")
+function CatJump() {
+    setTimeout(function() {
+        // console.log("up")
+        cat.style.bottom = (j + "px")
+        // console.log(j + "cat")
+        j++;
+        j++;
+        j++;
+        j++;
+        j++;
+        j++;
+        if (j < 100) {
+            CatJump();
+        } else {
+            CatJumpdown()
+            // break;
+        }
+    }, 10)
 }
 
+function CatJumpdown() {
+    setTimeout(function() {
+        // console.log("down")
+        cat.style.bottom = (j + "px")
+        // console.log(j + "cat")
+        j--;
+        j--;
+        j--;
+        j--;
+        j--;
+        j--;
+        if (j >= 0) {
+            // console.log("down")
+            CatJumpdown();
+        } else {
+            AllowcatJump = true
+        }
+    }, 10)
+}
+
+const jump = function(){
+    if (AllowcatJump){
+        AllowcatJump = false
+        j = 0
+        CatJump()
+    }
+
+    // window.alert("Jump")
+}
+let AllowcatJump = true
+let cat = document.getElementById("cat")
+cat.style.bottom = "0px"
 const sneak = function(){
     window.alert("Sneak")
 }
@@ -18,10 +66,9 @@ window.addEventListener("keyup", move)
 
 let speed = 1
 let adler = document.getElementById("adler")
-let cat = document.getElementById("cat")
 
 var i = 0;
-var j = 0;
+// var j = 0;
 
 function myLoop() {
     setTimeout(function() {
@@ -34,19 +81,10 @@ function myLoop() {
     }, 10)
 }
 
-function myLoop2() {
-    setTimeout(function() {
-        cat.style.left = (j + "px")
-        console.log(j + "cat")
-        j++;
-        if (j < 100) {
-            myLoop2();
-        }
-    }, 10)
-}
+
 
 
 myLoop();
 console.log("myloop end")
-myLoop2();
+// CatJump();
 

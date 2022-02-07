@@ -44,4 +44,5 @@ canvas {
 #cat {
     position: relative;
     height: 100px;
+    left: 10px;
 }
