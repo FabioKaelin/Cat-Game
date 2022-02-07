@@ -21,4 +21,4 @@ Jon, Fabio und Patric
 
 ## Planung
 
-Auf [Trello][https://trello.com/b/756oSZr1/todos]
+Auf [Trello](https://trello.com/b/756oSZr1/todos)
