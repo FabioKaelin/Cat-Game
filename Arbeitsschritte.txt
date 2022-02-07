@@ -1,0 +1,15 @@
+Katzen Herumfliegen
+HTML aufsetzen
+Highscore speichern
+Punkte zälen
+Punkte aktualisieren
+Start mit [Space]
+Sneaken mit [Arrow down]
+Springen mit [Space]
+Bewegung der Hindernisse
+Hindernisse zeichnen
+Punkte-Boost-Event bei positiven Hindernissen
+Punkte-Boost bei Punkte-Boost-Event
+Sterbe-Event bei negativen Hindernissen
+CSS machen
+Game-Over bei Sterbe-Event
