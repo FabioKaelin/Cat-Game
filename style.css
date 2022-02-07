@@ -1,13 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&display=swap');
 
 body {
-    text-align: center;
     font-family: 'Mochiy Pop P One', sans-serif;
+    height: 97%;
+    width: 99%;
+}
+
+html {
+    height: 99%;
+    width: 99%;
 }
 
 h1 {
     font-family: 'Mochiy Pop P One', sans-serif;
 }
+
+.center {
+    text-align: center;
+}
+
+
 canvas {
     height: 50%;
     width: 80%;
@@ -17,16 +29,16 @@ canvas {
     position: relative;
     top: 100px;
     /* left: 100px; */
-    right: 0px;
+    /* right: 0px; */
     height: 100px;
 }
 
 #GameContent{
-    margin-left: 150px;
+    margin-left: 20%;
     text-align:start;
     background-color: darkgray;
-    height: 200px;
-    width: 600px;
+    height: 30%;
+    width: 60%;
 
 }
 #cat {

@@ -25,7 +25,7 @@ var j = 0;
 
 function myLoop() {
     setTimeout(function() {
-        adler.style.right = (i + "px")
+        adler.style.bottom = (i + "px")
         console.log(i + "adler")
         i++;
         if (i < 100) {
