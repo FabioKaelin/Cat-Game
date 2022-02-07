@@ -8,14 +8,13 @@ function CatJump() {
         j++;
         j++;
         j++;
-        j++;
         if (j < 100) {
             CatJump();
         } else {
             CatJumpdown()
             // break;
         }
-    }, 10)
+    }, 2)
 }
 
 function CatJumpdown() {
@@ -28,14 +27,13 @@ function CatJumpdown() {
         j--;
         j--;
         j--;
-        j--;
         if (j >= 0) {
             // console.log("down")
             CatJumpdown();
         } else {
             AllowcatJump = true
         }
-    }, 10)
+    }, 2)
 }
 
 const jump = function(){
