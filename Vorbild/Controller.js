@@ -5,6 +5,7 @@ context = document.querySelector("canvas").getContext("2d");
 
 context.canvas.height = 180;
 context.canvas.width = 320;
+console.log(context.canvas)
 
 rectangle = {
 
@@ -27,9 +28,9 @@ controller = {
         var key_state = (event.type == "keydown")?true:false;
 
         switch(event.keyCode) {
-        case 38:// up key
-            controller.up = key_state;
-        break;
+            case 38:// up key
+                controller.up = key_state;
+            break;
 
         }
 
