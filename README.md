@@ -18,3 +18,7 @@ Erfreue dich an den fliegenden Katzen im Hintergrund, die von der [Cat API](http
 ## Teammitglieder
 
 Jon, Fabio und Patric
+
+## Planung
+
+Auf [Trello][https://trello.com/b/756oSZr1/todos]
