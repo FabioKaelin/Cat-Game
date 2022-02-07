@@ -1,27 +1,9 @@
-
-
-// context = document.querySelector("canvas").getContext("2d");
-
-// context.canvas.height = 180;
-// context.canvas.width = 320;
-
-// context.fillStyle = "#202020";
-// context.fillRect(0, 0, 320, 180);
-
-
-// context.strokeStyle = "#ff0000";
-// context.lineWidth = 4;
-// context.beginPath();
-// context.moveTo(0, 164);
-// context.lineTo(320, 164);
-// context.stroke();
-
 const jump = function(){
-    window.alert("Space")
+    window.alert("Jump")
 }
 
 const sneak = function(){
-    window.alert("arrow down")
+    window.alert("Sneak")
 }
 
 const move = function(){
@@ -43,25 +25,22 @@ var j = 0;
 
 function myLoop() {
     setTimeout(function() {
-        adler.style.left = (i + "px")
-        console.log(i)
-        console.log("adler")
+        adler.style.right = (i + "px")
+        console.log(i + "adler")
         i++;
-        if (i < 500) {
+        if (i < 100) {
             myLoop();
         }
     }, 10)
 }
 
 function myLoop2() {
-    console.log("cat")
     setTimeout(function() {
         cat.style.left = (j + "px")
-        console.log(j)
-        console.log("cat")
+        console.log(j + "cat")
         j++;
-        if (j < 500) {
-            myLoop();
+        if (j < 100) {
+            myLoop2();
         }
     }, 10)
 }
