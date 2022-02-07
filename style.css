@@ -8,3 +8,17 @@ body {
 h1 {
     font-family: 'Mochiy Pop P One', sans-serif;
 }
+canvas {
+    height: 50%;
+    width: 80%;
+}
+
+#adler{
+    position: relative;
+    top: 100px;
+    left: 100px;
+}
+
+#cat {
+    height: 100px;
+}
