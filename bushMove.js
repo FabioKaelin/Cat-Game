@@ -5,14 +5,17 @@ console.log(bush)
 k = 600;
 
 function moveBush() {
+    bush.style.display = "block"
     setTimeout(function() {
         bush.style.left = (k + "px")
-        if (k > 0) {
+        if (k > -50) {
             k--;
             k--;
             k--;
             k--;
             moveBush();
+        } else {
+            bush.style.display = "none";
         }
     }, 2)
 }
