@@ -8,7 +8,7 @@ function CatJump() {
         j++;
         j++;
         j++;
-        if (j < 100) {
+        if (j < 150) {
             CatJump();
         } else {
             CatJumpdown()
