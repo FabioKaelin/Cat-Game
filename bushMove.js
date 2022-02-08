@@ -7,12 +7,15 @@ j = 600;
 function moveBush() {
     setTimeout(function() {
         bush.style.left = (j + "px")
+
+        j--;
+        j--;
+        j--;
+        j--;
         if (j > 0) {
-            j--;
-            j--;
-            j--;
-            j--;
             moveBush();
         }
     }, 2)
 }
+
+moveBush()
