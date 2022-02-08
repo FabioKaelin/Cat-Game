@@ -2,17 +2,19 @@ let bush = document.getElementById("bush")
 bush.style.left = "600px"
 console.log(bush)
 
-j = 600;
+k = 600;
 
 function moveBush() {
     setTimeout(function() {
-        bush.style.left = (j + "px")
-        if (j > 0) {
-            j--;
-            j--;
-            j--;
-            j--;
+        bush.style.left = (k + "px")
+        if (k > 0) {
+            k--;
+            k--;
+            k--;
+            k--;
             moveBush();
         }
     }, 2)
 }
+
+moveBush();
