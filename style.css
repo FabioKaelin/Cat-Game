@@ -48,8 +48,9 @@ canvas {
 
     left: 10px;
 }
-#bush {
+.bush {
     position: absolute;
+    display: none;
     height: 100px;
     bottom: 0px;
 }
