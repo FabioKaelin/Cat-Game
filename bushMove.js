@@ -20,8 +20,4 @@ function moveBush() {
     }, 2)
 }
 
-<<<<<<< HEAD
-moveBush();
-=======
 moveBush()
->>>>>>> cacf6c12ce3b75c61960d8250310c393b1048d11
