@@ -45,48 +45,27 @@ const jump = function(){
 
     // window.alert("Jump")
 }
-let AllowcatJump = true
-let cat = document.getElementById("cat")
-cat.style.bottom = "0px"
+
+
 const sneak = function(){
     window.alert("Sneak")
 }
 
 const move = function(){
+    console.log(event.keyCode)
     if (event.keyCode == 32){
         jump()
     } else if (event.keyCode == 40){
+        sneakTrue = true
         sneak()
     }
 }
+
+
+let AllowcatJump = true
+let cat = document.getElementById("cat")
+let sneakTrue = false
+cat.style.bottom = "0px"
+
 window.addEventListener("keydown", move)
 window.addEventListener("keyup", move)
-
-let speed = 1
-let adler = document.getElementById("adler")
-
-var i = 0;
-// var j = 0;
-
-function myLoop() {
-    setTimeout(function() {
-        adler.style.bottom = (i + "px")
-        console.log(i + "adler")
-        i++;
-        if (i < 100) {
-            myLoop();
-        }
-    }, 10)
-}
-
-
-
-
-myLoop();
-console.log("myloop end")
-// CatJump();
-
-
-
-//Hallo Jon
-//Hallo FAbio
