@@ -44,7 +44,8 @@ canvas {
 }
 #cat {
     position: absolute;
-    height: 100px;
+    width: 10%;
+
     left: 10px;
 }
 #bush {

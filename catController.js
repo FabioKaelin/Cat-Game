@@ -14,7 +14,7 @@ function CatJump() {
             CatJumpdown()
             // break;
         }
-    }, 2)
+    }, 5)
 }
 
 function CatJumpdown() {
@@ -33,7 +33,7 @@ function CatJumpdown() {
         } else {
             AllowcatJump = true
         }
-    }, 2)
+    },5)
 }
 
 const jump = function(){
