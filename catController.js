@@ -48,7 +48,8 @@ const jump = function(){
 
 
 const sneak = function(){
-    window.alert("Sneak")
+    // window.alert("Sneak")
+    sneakTrue = true
 }
 
 const move = function(){
@@ -61,11 +62,42 @@ const move = function(){
     }
 }
 
+const unsneak = function(){
+    if (event.keyCode == 40){
+        sneakTrue = false
+    }
+}
+
 
 let AllowcatJump = true
 let cat = document.getElementById("cat")
 let sneakTrue = false
 cat.style.bottom = "0px"
+let frame = 1
 
 window.addEventListener("keydown", move)
-window.addEventListener("keyup", move)
+window.addEventListener("keyup", unsneak)
+
+const animation = function(){
+    setTimeout(function() {
+        if (sneakTrue) {
+            if (frame == 1){
+                cat.src = "./character/Cat/cat-walk-sneak2.png"
+                frame = 2
+            } else {
+                cat.src = "./character/Cat/cat-walk-sneak1.png"
+                frame = 1
+            }
+        } else {
+            if (frame == 1){
+                cat.src = "./character/Cat/cat-walk2.png"
+                frame = 2
+            } else {
+                cat.src = "./character/Cat/cat-walk1.png"
+                frame = 1
+            }
+        }
+        animation()
+    }, 100)
+}
+animation()
