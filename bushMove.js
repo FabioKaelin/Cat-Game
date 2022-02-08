@@ -1,23 +1,23 @@
-let bush = document.getElementById("bush")
-bush.style.left = "600px"
-console.log(bush)
+let bush = document.getElementsByClassName("bush")
+bush[0].style.left = "600px"
+console.log(bush[0])
 
 k = 600;
 
-function moveBush() {
-    bush.style.display = "block"
+function moveBush0() {
+    bush[0].style.display = "block"
     setTimeout(function() {
-        bush.style.left = (k + "px")
+        bush[0].style.left = (k + "px")
         if (k > -50) {
             k--;
             k--;
             k--;
             k--;
-            moveBush();
+            moveBush0();
         } else {
-            bush.style.display = "none";
+            bush[0].style.display = "none";
         }
     }, 2)
 }
 
-moveBush()
+moveBush0()
