@@ -8,7 +8,7 @@ var i = 0;
 function myLoop() {
     setTimeout(function() {
         adler.style.bottom = (i + "px")
-        console.log(i + "adler")
+        // console.log(i + "adler")
         i++;
         if (i < 100) {
             myLoop();
