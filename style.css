@@ -47,3 +47,8 @@ canvas {
     height: 100px;
     left: 10px;
 }
+#bush {
+    position: absolute;
+    height: 100px;
+    top: 75px;
+}
