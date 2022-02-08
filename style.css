@@ -50,5 +50,5 @@ canvas {
 #bush {
     position: absolute;
     height: 100px;
-    top: 75px;
+    bottom: 0px;
 }
