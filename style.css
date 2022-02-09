@@ -54,3 +54,19 @@ canvas {
     height: 100px;
     bottom: 0px;
 }
+
+#Mond {
+    position: absolute;
+    display: none;
+    left: 60%;
+    height: 65%;
+    width: auto;
+}
+
+#Sun {
+    position: absolute;
+    display: none;
+    left: 60%;
+    height: 65%;
+    width: auto;
+}
