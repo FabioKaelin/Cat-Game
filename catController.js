@@ -1,30 +1,35 @@
-function CatJump() {
+function CatJump(flowCounter) {
     setTimeout(function() {
         // console.log("up")
-        cat.style.bottom = (catY + "px")
+        cat.style.bottom = (catY + "%")
         // console.log(catY + "cat")
         catY++;
         catY++;
-        catY++;
-        catY++;
-        catY++;
-        if (catY < 150) {
-            CatJump();
+        if (catY < 60) {
+            CatJump(flowCounter);
         } else {
-            CatJumpdown()
+            CatJumpflow()
             // break;
         }
     }, 5)
 }
 
+function CatJumpflow(flowCounter){
+    setTimeout(function(){
+        flowCounter++
+        if (flowCounter < 10){
+            CatJumpflow(flowCounter)
+        } else {
+            CatJumpdown()
+        }
+    },90)
+}
+
 function CatJumpdown() {
     setTimeout(function() {
         // console.log("down")
-        cat.style.bottom = (catY + "px")
+        cat.style.bottom = (catY + "%")
         // console.log(catY + "cat")
-        catY--;
-        catY--;
-        catY--;
         catY--;
         catY--;
         if (catY >= 0) {
