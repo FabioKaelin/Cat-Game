@@ -36,18 +36,21 @@ function spawnBush(bushXArray, bushNumber, bushs){
         }
         spawnBush(bushXArray, bushNumber, bushs)
 
-    },1000)
-
-
+    },RanomTime())
 }
 
+function RanomTime() {
+    number = (Math.random() + 1)* 1000
+    console.log(number)
+    return number
+}
 function DelayStart() {
 
     setTimeout(function(){
         // bush[0].style.left = "600px"
         // console.log(bushs[0])
         spawnBush(bushXArray, bushNumber, bushs)
-    },5)
+    },500)
 }
 
 DelayStart()
