@@ -1,5 +1,6 @@
 var catY = 0;
 var gameOver = false
+var sneakTrue = false
 
 function CatJump(flowCounter) {
     setTimeout(function() {
@@ -76,7 +77,7 @@ const unsneak = function(){
 
 let AllowcatJump = true
 let cat = document.getElementById("cat")
-let sneakTrue = false
+// let sneakTrue = false
 cat.style.bottom = "0px"
 let frame = 1
 let position = 1
