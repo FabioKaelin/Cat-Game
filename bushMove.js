@@ -4,30 +4,33 @@ console.log(bush[0])
 
 
 
-function moveBush0(k) {
-    bush[0].style.display = "block"
+function moveBush0(bushX, CurrentBush) {
+    bush[CurrentBush].style.left = bushX
+    bush[CurrentBush].style.display = "block"
     setTimeout(function() {
-        bush[0].style.left = (k + "px")
-        if (k > -50) {
-            k--;
-            k--;
-            k--;
-            k--;
-            moveBush0(k);
+        bush[CurrentBush].style.left = (bushX + "%")
+        if (bushX > -5) {
+            bushX -= 0.5;
+            moveBush0(bushX, CurrentBush);
         } else {
-            bush[0].style.display = "none";
+            bush[CurrentBush].style.display = "none";
         }
     }, 2)
 }
 
-// moveBush0()
-
+let bushNumber = 0
+let bushXArray = []
 function spawnBush(){
     setTimeout(function(){
         if (Math.floor(Math.random() * 10) < 8){
             console.log("new bush")
-            let  k = 600;
-            moveBush0(k)
+            bushXArray[bushNumber] = 95;
+            console.log(bushXArray)
+            moveBush0(bushXArray[bushNumber], bushNumber)
+            bushNumber++
+            if(bushNumber == 3){
+                bushNumber = 0
+            }
         }
         spawnBush()
 
