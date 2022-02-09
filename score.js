@@ -4,7 +4,7 @@ let scores = document.getElementById("Score")
 function score() {
     setTimeout(function(){
         x += 1;
-        scores.innerText = x;
+        scores.innerText = "Score: " + x;
         score();
     }, 100)
 }
