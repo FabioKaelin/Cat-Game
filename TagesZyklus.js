@@ -7,8 +7,6 @@ mond.style.display = "none"
 let night = false;
 
 let t = 0;
-console.log(mond)
-console.log(sun)
 function zyklus() {
     setTimeout(function() {
         if (t < 5000) {

@@ -1,10 +1,9 @@
 var catY = 0;
+var gameOver = false
 
 function CatJump(flowCounter) {
     setTimeout(function() {
-        // console.log("up")
         cat.style.bottom = (catY + "%")
-        // console.log(catY + "cat")
         catY++;
         catY++;
         if (catY < 60) {
@@ -29,13 +28,10 @@ function CatJumpflow(flowCounter){
 
 function CatJumpdown() {
     setTimeout(function() {
-        // console.log("down")
         cat.style.bottom = (catY + "%")
-        // console.log(catY + "cat")
         catY--;
         catY--;
         if (catY >= 0) {
-            // console.log("down")
             CatJumpdown();
         } else {
             AllowcatJump = true
@@ -50,17 +46,14 @@ const jump = function(){
         CatJump()
     }
 
-    // window.alert("Jump")
 }
 
 
 const sneak = function(){
-    // window.alert("Sneak")
     sneakTrue = true
 }
 
 const move = function(){
-    // console.log(event.keyCode)
     if (event.keyCode == 32){
         jump()
     } else if (event.keyCode == 40){
