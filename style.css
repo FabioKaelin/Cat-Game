@@ -36,13 +36,13 @@ h1 {
 }
 
 #GameContent{
-    margin-left: 20%;
+    margin-left: 10%;
     position: relative;
     text-align:start;
     background-color: rgb(43, 43, 43);
     transition: 1000ms;
-    height: 30%;
-    width: 60%;
+    height: 40%;
+    width: 80%;
 
 }
 #cat {
