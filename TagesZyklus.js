@@ -101,7 +101,29 @@ zyklus()
 let stars = document.getElementsByClassName("star")
 console.info(stars)
 
+ycords1 = Math.floor(Math.random() * 50);
+stars[0].style.top = `${ycords1}%`
+
+ycords2 = Math.floor(Math.random() * 50);
+stars[1].style.top = `${ycords2}%`
+
+ycords3 = Math.floor(Math.random() * 50);
+stars[2].style.top = `${ycords3}%`
+
+ycords4 = Math.floor(Math.random() * 50);
+stars[3].style.top = `${ycords4}%`
+
+ycords5 = Math.floor(Math.random() * 50);
+stars[4].style.top = `${ycords5}%`
+
+ycords6 = Math.floor(Math.random() * 50);
+stars[5].style.top = `${ycords6}%`
+
+ycords7 = Math.floor(Math.random() * 50);
+stars[6].style.top = `${ycords7}%`
+
 function star() {
+    setTimeout(function() {
     if (night = true) {
 
         ycords1 = Math.floor(Math.random() * 50);
@@ -127,6 +149,7 @@ function star() {
 
     } else {
     }
+}, 50000)
 }
 
 star()
