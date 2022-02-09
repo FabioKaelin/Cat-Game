@@ -1,14 +1,14 @@
 function CatJump() {
     setTimeout(function() {
         // console.log("up")
-        cat.style.bottom = (j + "px")
-        // console.log(j + "cat")
-        j++;
-        j++;
-        j++;
-        j++;
-        j++;
-        if (j < 150) {
+        cat.style.bottom = (catY + "px")
+        // console.log(catY + "cat")
+        catY++;
+        catY++;
+        catY++;
+        catY++;
+        catY++;
+        if (catY < 150) {
             CatJump();
         } else {
             CatJumpdown()
@@ -20,14 +20,14 @@ function CatJump() {
 function CatJumpdown() {
     setTimeout(function() {
         // console.log("down")
-        cat.style.bottom = (j + "px")
-        // console.log(j + "cat")
-        j--;
-        j--;
-        j--;
-        j--;
-        j--;
-        if (j >= 0) {
+        cat.style.bottom = (catY + "px")
+        // console.log(catY + "cat")
+        catY--;
+        catY--;
+        catY--;
+        catY--;
+        catY--;
+        if (catY >= 0) {
             // console.log("down")
             CatJumpdown();
         } else {
@@ -39,7 +39,7 @@ function CatJumpdown() {
 const jump = function(){
     if (AllowcatJump){
         AllowcatJump = false
-        j = 0
+        catY = 0
         CatJump()
     }
 
@@ -59,6 +59,8 @@ const move = function(){
     } else if (event.keyCode == 40){
         sneakTrue = true
         sneak()
+    } else if(event.keyCode == 38){
+        jump()
     }
 }
 
@@ -74,6 +76,7 @@ let cat = document.getElementById("cat")
 let sneakTrue = false
 cat.style.bottom = "0px"
 let frame = 1
+let position = 1
 
 window.addEventListener("keydown", move)
 window.addEventListener("keyup", unsneak)
@@ -81,23 +84,40 @@ window.addEventListener("keyup", unsneak)
 const animation = function(){
     setTimeout(function() {
         if (sneakTrue) {
-            if (frame == 1){
+            if (position == 1){
                 cat.src = "./character/Cat/cat-walk-sneak2.png"
-                frame = 2
+                position = 2
+                frame++
+                if (frame == 5){
+                    frame = 0
+                    position = 2
+                }
             } else {
                 cat.src = "./character/Cat/cat-walk-sneak1.png"
-                frame = 1
+                frame++
+                if (frame == 5){
+                    frame = 0
+                    position = 1
+                }
             }
         } else {
-            if (frame == 1){
+            if (position == 1){
                 cat.src = "./character/Cat/cat-walk2.png"
-                frame = 2
+                frame++
+                if (frame == 25){
+                    frame = 0
+                    position = 2
+                }
             } else {
                 cat.src = "./character/Cat/cat-walk1.png"
-                frame = 1
+                frame++
+                if (frame == 25){
+                    frame = 0
+                    position = 1
+                }
             }
         }
         animation()
-    }, 100)
+    }, 5)
 }
 animation()
