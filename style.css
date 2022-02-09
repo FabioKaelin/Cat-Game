@@ -77,6 +77,7 @@ h1 {
 }
 
 .star {
+    position: absolute;
     top: 0%;
     height: 35%;
     display: none;
