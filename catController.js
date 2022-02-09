@@ -59,6 +59,7 @@ const move = function(){
     } else if (event.keyCode == 40){
         sneakTrue = true
         sneak()
+        AllowcatJump = false
     } else if(event.keyCode == 38){
         jump()
     }
@@ -67,6 +68,7 @@ const move = function(){
 const unsneak = function(){
     if (event.keyCode == 40){
         sneakTrue = false
+        AllowcatJump = true
     }
 }
 
@@ -118,6 +120,6 @@ const animation = function(){
             }
         }
         animation()
-    }, 5)
+    }, 2)
 }
 animation()
