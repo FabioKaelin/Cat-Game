@@ -7,7 +7,7 @@ body {
     overflow-y:hidden;
     overflow-x: hidden;
     background-color: dimgray;
-    transition: 1000ms;
+    transition: 5000ms;
 }
 
 html {
@@ -40,7 +40,7 @@ h1 {
     position: relative;
     text-align:start;
     background-color: rgb(43, 43, 43);
-    transition: 1000ms;
+    transition: 5000ms;
     height: 40%;
     width: 80%;
 
@@ -48,7 +48,6 @@ h1 {
 #cat {
     position: absolute;
     width: 10%;
-
     left: 10px;
 }
 .bush {

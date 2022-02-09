@@ -1,15 +1,17 @@
 
 var bushs = document.getElementsByClassName("bush")
-// console.log(bushs)
 let bushNumber = 0
 let bushXArray = []
 
 function moveBush(bushX, CurrentBush, bushs) {
-    // console.log(bushX)
-    // console.log(bushs)
-    // console.log(CurrentBush)
     bushs[CurrentBush].style.left = bushX
     bushs[CurrentBush].style.display = "block"
+    if((bushX < 10 && bushX > 2) && (catY < 10)){
+        gameOver = true
+    }
+    if(gameOver){
+        return
+    }
     setTimeout(function() {
         bushs[CurrentBush].style.left = (bushX + "%")
         if (bushX > -5) {
@@ -21,13 +23,13 @@ function moveBush(bushX, CurrentBush, bushs) {
     }, 2)
 }
 function spawnBush(bushXArray, bushNumber, bushs){
+    if(gameOver){
+        return
+    }
 
     setTimeout(function(){
         if (Math.floor(Math.random() * 10) < 8){
-            // console.log("new bush")
             bushXArray[bushNumber] = 95;
-            // console.log(bushXArray[bushNumber])
-            // console.log(bushs)
             moveBush(bushXArray[bushNumber], bushNumber, bushs)
             bushNumber++
             if(bushNumber == 3){
@@ -40,26 +42,15 @@ function spawnBush(bushXArray, bushNumber, bushs){
 }
 
 function RanomTime() {
-    console.log(catY)
     number = (Math.random() + 1)* 1000
     return number
 }
 function DelayStart() {
 
     setTimeout(function(){
-        // bush[0].style.left = "600px"
-        // console.log(bushs[0])
         spawnBush(bushXArray, bushNumber, bushs)
     },500)
 }
 
 DelayStart()
-console.log(catY)
 
-function lagMachine(){
-    setTimeout(function(){
-        console.log(catY)
-        lagMachine()
-    },100)
-}
-lagMachine()
