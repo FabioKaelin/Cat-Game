@@ -43,21 +43,24 @@ h1 {
     transition: 5000ms;
     height: 40%;
     width: 80%;
+    overflow-y:hidden;
+    overflow-x: hidden;
+    overflow: hidden;
 
 }
 #cat {
     position: absolute;
     width: 10%;
     left: 10px;
-    width: 20%;
+    width: 10%;
 }
 .bush {
     position: absolute;
     display: none;
     height: 100px;
     bottom: 0px;
-    height: 30%;
-    width: 6.5%;
+    height: 20%;
+    width: 5%;
 }
 
 #Mond {
