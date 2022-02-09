@@ -17,7 +17,7 @@ Erfreue dich an den fliegenden Katzen im Hintergrund, die von der [Cat API](http
 
 ## Teammitglieder
 
-Jon, Fabio und Patric
+Jon und Fabio
 
 ## Planung
 
