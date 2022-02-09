@@ -40,7 +40,7 @@ function spawnBush(bushXArray, bushNumber, bushs){
 }
 
 function RanomTime() {
-    number = (Math.random() + 1)* 1000
+    number = (Math.random() + 1)* 800
     console.log(number)
     return number
 }
