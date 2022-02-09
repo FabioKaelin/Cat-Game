@@ -1,40 +1,53 @@
-let bush = document.getElementsByClassName("bush")
-bush[0].style.left = "600px"
-console.log(bush[0])
 
+var bushs = document.getElementsByClassName("bush")
+// console.log(bushs)
+let bushNumber = 0
+let bushXArray = []
 
-
-function moveBush0(bushX, CurrentBush) {
-    bush[CurrentBush].style.left = bushX
-    bush[CurrentBush].style.display = "block"
+function moveBush(bushX, CurrentBush, bushs) {
+    // console.log(bushX)
+    // console.log(bushs)
+    // console.log(CurrentBush)
+    bushs[CurrentBush].style.left = bushX
+    bushs[CurrentBush].style.display = "block"
     setTimeout(function() {
-        bush[CurrentBush].style.left = (bushX + "%")
+        bushs[CurrentBush].style.left = (bushX + "%")
         if (bushX > -5) {
             bushX -= 0.5;
-            moveBush0(bushX, CurrentBush);
+            moveBush(bushX, CurrentBush, bushs);
         } else {
-            bush[CurrentBush].style.display = "none";
+            bushs[CurrentBush].style.display = "none";
         }
     }, 2)
 }
+function spawnBush(bushXArray, bushNumber, bushs){
 
-let bushNumber = 0
-let bushXArray = []
-function spawnBush(){
     setTimeout(function(){
         if (Math.floor(Math.random() * 10) < 8){
-            console.log("new bush")
+            // console.log("new bush")
             bushXArray[bushNumber] = 95;
-            console.log(bushXArray)
-            moveBush0(bushXArray[bushNumber], bushNumber)
+            // console.log(bushXArray[bushNumber])
+            // console.log(bushs)
+            moveBush(bushXArray[bushNumber], bushNumber, bushs)
             bushNumber++
             if(bushNumber == 3){
                 bushNumber = 0
             }
         }
-        spawnBush()
+        spawnBush(bushXArray, bushNumber, bushs)
 
     },1000)
+
+
 }
 
-spawnBush()
+function DelayStart() {
+
+    setTimeout(function(){
+        // bush[0].style.left = "600px"
+        // console.log(bushs[0])
+        spawnBush(bushXArray, bushNumber, bushs)
+    },5)
+}
+
+DelayStart()
