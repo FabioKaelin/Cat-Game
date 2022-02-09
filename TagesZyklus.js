@@ -40,6 +40,28 @@ function zyklus() {
                 stars[5].style.left = `${0.035 * xcords5}%`
                 stars[6].style.left = `${0.035 * xcords6}%`
 
+                if(xcords0 > 2500){
+                    xcords0 = 0
+                }
+                if(xcords1 > 2500){
+                    xcords1 = 0
+                }
+                if(xcords2 > 2500){
+                    xcords2 = 0
+                }
+                if(xcords3 > 2500){
+                    xcords3 = 0
+                }
+                if(xcords4 > 2500){
+                    xcords4 = 0
+                }
+                if(xcords5 > 2500){
+                    xcords5 = 0
+                }
+                if(xcords6 > 2500){
+                    xcords6 = 0
+                }
+
                 stars[0].style.display = "block"
                 stars[1].style.display = "block"
                 stars[2].style.display = "block"
@@ -103,13 +125,6 @@ function star() {
         ycords7 = Math.floor(Math.random() * 50);
         stars[6].style.top = `${ycords7}%`
 
-        stars[0].style.left = `${0.035 * t}%`
-        stars[1].style.left = `${0.035 * t}%`
-        stars[2].style.left = `${0.035 * t}%`
-        stars[3].style.left = `${0.035 * t}%`
-        stars[4].style.left = `${0.035 * t}%`
-        stars[5].style.left = `${0.035 * t}%`
-        stars[6].style.left = `${0.035 * t}%`
     } else {
     }
 }
