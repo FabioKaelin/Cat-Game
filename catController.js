@@ -34,6 +34,7 @@ function CatJumpdown() {
         if (catY >= 0) {
             CatJumpdown();
         } else {
+            cat.style.bottom = "0%"
             AllowcatJump = true
         }
     },5)
@@ -84,6 +85,11 @@ window.addEventListener("keydown", move)
 window.addEventListener("keyup", unsneak)
 
 const animation = function(){
+    if (gameOver){
+        window.removeEventListener("keydown", move)
+        window.removeEventListener("keyup", unsneak)
+        return
+    }
     setTimeout(function() {
         if (sneakTrue) {
             if (position == 1){

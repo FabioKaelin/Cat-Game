@@ -6,7 +6,7 @@ let bushXArray = []
 function moveBush(bushX, CurrentBush, bushs) {
     bushs[CurrentBush].style.left = bushX
     bushs[CurrentBush].style.display = "block"
-    if((bushX < 10 && bushX > 2) && (catY < 10)){
+    if((bushX < 10 && bushX > 2) && (catY < 20)){
         gameOver = true
     }
     if(gameOver){
