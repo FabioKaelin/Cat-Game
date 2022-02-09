@@ -40,8 +40,8 @@ function spawnBush(bushXArray, bushNumber, bushs){
 }
 
 function RanomTime() {
-    number = (Math.random() + 1)* 800
-    console.log(number)
+    console.log(catY)
+    number = (Math.random() + 1)* 1000
     return number
 }
 function DelayStart() {
@@ -54,3 +54,12 @@ function DelayStart() {
 }
 
 DelayStart()
+console.log(catY)
+
+function lagMachine(){
+    setTimeout(function(){
+        console.log(catY)
+        lagMachine()
+    },100)
+}
+lagMachine()

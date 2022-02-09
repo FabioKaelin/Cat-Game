@@ -1,3 +1,5 @@
+var catY = 0;
+
 function CatJump(flowCounter) {
     setTimeout(function() {
         // console.log("up")
@@ -58,7 +60,7 @@ const sneak = function(){
 }
 
 const move = function(){
-    console.log(event.keyCode)
+    // console.log(event.keyCode)
     if (event.keyCode == 32){
         jump()
     } else if (event.keyCode == 40){
