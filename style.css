@@ -76,3 +76,10 @@ h1 {
     height: 65%;
     width: auto;
 }
+
+.star {
+    top: 0%;
+    height: 35%;
+    display: none;
+    left: 0%;
+}
