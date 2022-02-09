@@ -48,7 +48,18 @@ let stars = document.getElementsByClassName("star")
 function star() {
     if (night = true) {
 
+        ycords1 = Math.floor(Math.random() * 75);
+        stars[0].style.top = `${ycords1}%`
 
+        ycords2 = Math.floor(Math.random() * 75);
+        stars[1].style.top = `${ycords2}%`
+
+        ycords3 = Math.floor(Math.random() * 75);
+        stars[2].style.top = `${ycords3}%`
+
+        stars[0].style.left = `${0.03 * (t - 2500)}%`
+        stars[1].style.left = `${0.03 * (t - 2500)}%`
+        stars[2].style.left = `${0.03 * (t - 2500)}%`
     } else {
     }
 }

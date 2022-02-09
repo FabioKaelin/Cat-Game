@@ -93,16 +93,15 @@ const animation = function(){
         if (sneakTrue) {
             if (position == 1){
                 cat.src = "./character/Cat/cat-walk-sneak2.png"
-                position = 2
                 frame++
-                if (frame == 5){
+                if (frame > 12){
                     frame = 0
                     position = 2
                 }
             } else {
                 cat.src = "./character/Cat/cat-walk-sneak1.png"
                 frame++
-                if (frame == 5){
+                if (frame > 12){
                     frame = 0
                     position = 1
                 }
@@ -111,14 +110,14 @@ const animation = function(){
             if (position == 1){
                 cat.src = "./character/Cat/cat-walk2.png"
                 frame++
-                if (frame == 25){
+                if (frame > 12){
                     frame = 0
                     position = 2
                 }
             } else {
                 cat.src = "./character/Cat/cat-walk1.png"
                 frame++
-                if (frame == 25){
+                if (frame > 12){
                     frame = 0
                     position = 1
                 }
