@@ -6,9 +6,6 @@ sun.style.display = "none"
 mond.style.display = "none"
 let night = false;
 
-
-
-
 let xcords0 = Math.floor(Math.random() * 2400);
 let xcords1 = Math.floor(Math.random() * 2400);
 let xcords2 = Math.floor(Math.random() * 2400);
