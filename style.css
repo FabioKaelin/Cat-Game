@@ -72,6 +72,15 @@ h1 {
     width: 10%;
 }
 
+.spatz {
+    position: absolute;
+    display: none;
+    height: 100px;
+    bottom: 0px;
+    height: 10%;
+    width: 5%;
+}
+
 #Mond {
     position: absolute;
     display: none;

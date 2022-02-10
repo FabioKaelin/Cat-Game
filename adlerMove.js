@@ -47,14 +47,14 @@ function RanomTime() {
     number = (Math.random() + 1)* 2000
     return number
 }
-function DelayStart() {
+function DelayStartAdler() {
 
     setTimeout(function(){
         spawnadler(adlerXArray, adlerNumber, adlers)
     },52000)
 }
 
-DelayStart()
+DelayStartAdler()
 
 
 

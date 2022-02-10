@@ -1,6 +1,7 @@
 var catY = 0;
 var gameOver = false
 var sneakTrue = false
+var spatzBonus = false
 
 function CatJump(flowCounter) {
     setTimeout(function() {

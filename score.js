@@ -6,8 +6,13 @@ function score() {
         return
     }
     setTimeout(function(){
-        x += 1;
+        x++ ;
+        if(spatzBonus){
+            x += 30
+            spatzBonus = false
+        }
         scores.innerText = "Score: " + x;
+
         score();
     }, 100)
 }
