@@ -1,5 +1,5 @@
 function restart() {
-    if (event.keyCode == 32) {
+    if (event.keyCode == 32 || onclick) {
         if (gameOver == true) {
             window.location.reload();
         }
