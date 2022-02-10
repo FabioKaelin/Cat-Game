@@ -4,14 +4,15 @@ let bushNumber = 0
 let bushXArray = []
 
 function moveBush(bushX, CurrentBush, bushs) {
+    if(gameOver){
+        return
+    }
     bushs[CurrentBush].style.left = bushX
     bushs[CurrentBush].style.display = "block"
     if((bushX < 10 && bushX > 2) && (catY < 20)){
         gameOver = true
     }
-    if(gameOver){
-        return
-    }
+
     setTimeout(function() {
         bushs[CurrentBush].style.left = (bushX + "%")
         if (bushX > -5) {
