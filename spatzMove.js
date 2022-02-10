@@ -21,7 +21,7 @@ function movespatz(spatzX, Currentspatz, spatzs, spatzY) {
         } else {
             spatzs[Currentspatz].style.display = "none";
         }
-    }, 10)
+    }, 10 / gamespeed)
 }
 function spawnspatz(spatzXArray, spatzNumber, spatzs){
     if(gameOver){
@@ -46,7 +46,7 @@ function spawnspatz(spatzXArray, spatzNumber, spatzs){
 }
 
 function RanomTime() {
-    number = (Math.random() + 1)* 4000
+    number = (Math.random() + 1)* 4000 / gamespeed
     return number
 }
 function DelayStartSpatz() {
@@ -92,7 +92,7 @@ const spatzAnimation0 = function(){
             }
         }
     spatzAnimation0()
-    }, 8)
+    }, 10 / gamespeed)
 }
 const spatzAnimation1 = function(){
     if (gameOver){
@@ -117,7 +117,7 @@ const spatzAnimation1 = function(){
             }
         }
     spatzAnimation1()
-    },8)
+    },10 / gamespeed)
 }
 const spatzAnimation2 = function(){
     if (gameOver){
@@ -142,7 +142,7 @@ const spatzAnimation2 = function(){
             }
         }
     spatzAnimation2()
-    }, 8)
+    }, 10 / gamespeed)
 }
 spatzAnimation0()
 spatzAnimation1()

@@ -3,6 +3,7 @@ var gameOver = false
 var sneakTrue = false
 var spatzBonus = false
 var mausBonus = false
+var gamespeed = 1
 
 function CatJump(flowCounter) {
     setTimeout(function() {
@@ -17,7 +18,7 @@ function CatJump(flowCounter) {
             CatJumpflow()
             // break;
         }
-    }, 5)
+    }, 5/gamespeed)
 }
 
 function CatJumpflow(flowCounter){
@@ -28,7 +29,7 @@ function CatJumpflow(flowCounter){
         } else {
             CatJumpdown()
         }
-    },90)
+    },90/gamespeed)
 }
 
 function CatJumpdown() {
@@ -45,7 +46,7 @@ function CatJumpdown() {
             cat.style.bottom = "0%"
             AllowcatJump = true
         }
-    },5)
+    },5/gamespeed)
 }
 
 const jump = function(){
@@ -133,6 +134,6 @@ const Catanimation = function(){
             }
         }
         Catanimation()
-    }, 2)
+    }, 10/gamespeed)
 }
 Catanimation()

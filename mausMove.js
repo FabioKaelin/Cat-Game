@@ -20,7 +20,7 @@ function movemaus(mausX, Currentmaus, mauss) {
         } else {
             mauss[Currentmaus].style.display = "none";
         }
-    }, 20)
+    }, 20 / gamespeed)
 }
 function spawnmaus(mausXArray, mausNumber, mauss){
     if(gameOver){
@@ -43,14 +43,14 @@ function spawnmaus(mausXArray, mausNumber, mauss){
 }
 
 function RanomTime() {
-    number = (Math.random() + 1)* 2000
+    number = (Math.random() + 1)* 2000 / gamespeed
     return number
 }
 function DelayStart() {
 
     setTimeout(function(){
         spawnmaus(mausXArray, mausNumber, mauss)
-    },500)
+    },2000)
 }
 
 DelayStart()

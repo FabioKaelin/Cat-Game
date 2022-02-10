@@ -15,6 +15,7 @@ function score() {
             x += 30
             mausBonus = false
         }
+        gamespeed += 0.0005
         scores.innerText = "Score: " + x;
 
         score();

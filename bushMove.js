@@ -15,12 +15,12 @@ function moveBush(bushX, CurrentBush, bushs) {
     setTimeout(function() {
         bushs[CurrentBush].style.left = (bushX + "%")
         if (bushX > -5) {
-            bushX -= 0.5;
+            bushX -= 1;
             moveBush(bushX, CurrentBush, bushs);
         } else {
             bushs[CurrentBush].style.display = "none";
         }
-    }, 2)
+    }, 10 / gamespeed)
 }
 function spawnBush(bushXArray, bushNumber, bushs){
     if(gameOver){
@@ -42,7 +42,7 @@ function spawnBush(bushXArray, bushNumber, bushs){
 }
 
 function RanomTime() {
-    number = (Math.random() + 1)* 1000
+    number = (Math.random() + 1)* 1000 / gamespeed
     return number
 }
 function DelayStart() {

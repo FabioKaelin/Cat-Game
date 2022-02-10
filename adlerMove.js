@@ -20,7 +20,7 @@ function moveadler(adlerX, Currentadler, adlers, adlerY) {
         } else {
             adlers[Currentadler].style.display = "none";
         }
-    }, 10)
+    }, 10 / gamespeed)
 }
 function spawnadler(adlerXArray, adlerNumber, adlers){
     if(gameOver){
@@ -44,7 +44,7 @@ function spawnadler(adlerXArray, adlerNumber, adlers){
 }
 
 function RanomTime() {
-    number = (Math.random() + 1)* 2000
+    number = (Math.random() + 1)* 2000 / gamespeed
     return number
 }
 function DelayStartAdler() {
@@ -90,7 +90,7 @@ const AdlerAnimation0 = function(){
             }
         }
     AdlerAnimation0()
-    }, 8)
+    }, 10 / gamespeed)
 }
 const AdlerAnimation1 = function(){
     if (gameOver){
@@ -115,7 +115,7 @@ const AdlerAnimation1 = function(){
             }
         }
     AdlerAnimation1()
-    },8)
+    },10 / gamespeed)
 }
 const AdlerAnimation2 = function(){
     if (gameOver){
@@ -140,7 +140,7 @@ const AdlerAnimation2 = function(){
             }
         }
     AdlerAnimation2()
-    }, 8)
+    }, 10 / gamespeed)
 }
 AdlerAnimation0()
 AdlerAnimation1()
