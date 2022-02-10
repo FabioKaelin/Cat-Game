@@ -7,7 +7,6 @@ function moveadler(adlerX, Currentadler, adlers, adlerY) {
     adlers[Currentadler].style.left = adlerX
     adlers[Currentadler].style.display = "block"
     if((adlerX < 10 && adlerX > 2) && (catY > (100-adlerY)-40 /*-((sneakTrue + 1)*20)*/ && catY < (100-adlerY))){
-        console.log(`catY: ${catY}|adlerY:${adlerY}|1:`)
         gameOver = true
     }
     if(gameOver){
@@ -33,7 +32,6 @@ function spawnadler(adlerXArray, adlerNumber, adlers){
             adlerXArray[adlerNumber] = 95;
             let adlerY = Math.floor(Math.random() * 75)
             adlers[adlerNumber].style.top = `${adlerY}%`
-            console.log(adlerY)
             moveadler(adlerXArray[adlerNumber], adlerNumber, adlers, adlerY)
             adlerNumber++
             if(adlerNumber == 3){
