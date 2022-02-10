@@ -1,5 +1,9 @@
 function restart() {
-    
-    window.location.reload();
+    if (event.keyCode == 32) {
+        if (gameOver == true) {
+            window.location.reload();
+        }
+    }
 }
+window.addEventListener("keydown", restart)
 document.getElementById("restartButton").addEventListener("click", restart)
