@@ -8,6 +8,7 @@ function movespatz(spatzX, Currentspatz, spatzs, spatzY) {
     spatzs[Currentspatz].style.display = "block"
     if((spatzX < 10 && spatzX > 2) && (catY > (100-spatzY)-20 /*-((sneakTrue + 1)*20)*/ && catY < (100-spatzY))){
         spatzBonus = true
+        spatzs.style.display = "none";
     }
     if(gameOver){
         return
