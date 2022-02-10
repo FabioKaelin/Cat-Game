@@ -11,6 +11,10 @@ function score() {
             x += 30
             spatzBonus = false
         }
+        if(mausBonus){
+            x += 30
+            mausBonus = false
+        }
         scores.innerText = "Score: " + x;
 
         score();

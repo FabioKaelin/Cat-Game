@@ -63,6 +63,15 @@ h1 {
     width: 5%;
 }
 
+.maus {
+    position: absolute;
+    display: none;
+    height: 100px;
+    bottom: -3%;
+    height: 20%;
+    width: 5%;
+}
+
 .adler {
     position: absolute;
     display: none;

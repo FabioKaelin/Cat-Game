@@ -1,6 +1,7 @@
 
 var spatzs = document.getElementsByClassName("spatz")
 let spatzNumber = 0
+
 let spatzXArray = []
 
 function movespatz(spatzX, Currentspatz, spatzs, spatzY) {
@@ -16,7 +17,7 @@ function movespatz(spatzX, Currentspatz, spatzs, spatzY) {
     setTimeout(function() {
         spatzs[Currentspatz].style.left = (spatzX + "%")
         if (spatzX > -5) {
-            spatzX -= 0.5;
+            spatzX -= 0.2;
             movespatz(spatzX, Currentspatz, spatzs, spatzY);
         } else {
             spatzs[Currentspatz].style.display = "none";
