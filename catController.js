@@ -40,10 +40,10 @@ function CatJumpdown() {
         if(sneakTrue){
             catY--
         }
-        if (catY >= 0) {
+        if (catY >= 4) {
             CatJumpdown();
         } else {
-            cat.style.bottom = "0%"
+            cat.style.bottom = "2%"
             AllowcatJump = true
         }
     },5/gamespeed)
@@ -86,7 +86,7 @@ const unsneak = function(){
 let AllowcatJump = true
 let cat = document.getElementById("cat")
 // let sneakTrue = false
-cat.style.bottom = "0px"
+cat.style.bottom = "2%"
 let frame = 1
 let position = 1
 
