@@ -6,14 +6,26 @@ sun.style.display = "none"
 mond.style.display = "none"
 let night = false;
 
+function xcords() {
+    xcords0 = Math.floor(Math.random() * 2000);
+    xcords1 = Math.floor(Math.random() * 2000);
+    xcords2 = Math.floor(Math.random() * 2000);
+    xcords3 = Math.floor(Math.random() * 2000);
+    xcords4 = Math.floor(Math.random() * 2000);
+    xcords5 = Math.floor(Math.random() * 2000);
+    xcords6 = Math.floor(Math.random() * 2000);
+    setTimeout(function() {
+        xcords0 = Math.floor(Math.random() * 2000);
+        xcords1 = Math.floor(Math.random() * 2000);
+        xcords2 = Math.floor(Math.random() * 2000);
+        xcords3 = Math.floor(Math.random() * 2000);
+        xcords4 = Math.floor(Math.random() * 2000);
+        xcords5 = Math.floor(Math.random() * 2000);
+        xcords6 = Math.floor(Math.random() * 2000);
+    }, 50000)
 
-xcords0 = Math.floor(Math.random() * 2000);
-xcords1 = Math.floor(Math.random() * 2000);
-xcords2 = Math.floor(Math.random() * 2000);
-xcords3 = Math.floor(Math.random() * 2000);
-xcords4 = Math.floor(Math.random() * 2000);
-xcords5 = Math.floor(Math.random() * 2000);
-xcords6 = Math.floor(Math.random() * 2000);
+}
+
 
 let t = 0;
 function zyklus() {
@@ -99,7 +111,6 @@ function zyklus() {
 zyklus()
 
 let stars = document.getElementsByClassName("star")
-console.info(stars)
 
 ycords1 = Math.floor(Math.random() * 50);
 stars[0].style.top = `${ycords1}%`
@@ -123,7 +134,7 @@ ycords7 = Math.floor(Math.random() * 50);
 stars[6].style.top = `${ycords7}%`
 
 function star() {
-    setTimeout(function() {
+    setInterval(function() {
     if (night = true) {
 
         ycords1 = Math.floor(Math.random() * 50);
@@ -149,6 +160,7 @@ function star() {
 
     } else {
     }
+    star()
 }, 50000)
 }
 
