@@ -17,3 +17,6 @@ Wenn man Stribt [Leertaste] und es wird Restartet
 Gute Tiere
 Punkte = Beschleunigung
 Verschiedene Büsche
+Mehrere Böden
+Springen mit Linksklick
+Sneak mit Rechtsklick
