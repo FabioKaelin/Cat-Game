@@ -67,7 +67,6 @@ const move = function(){
     if (event.keyCode == 32){
         jump()
     } else if (event.keyCode == 40){
-        sneakTrue = true
         sneak()
         AllowcatJump = false
     } else if(event.keyCode == 38){
@@ -75,12 +74,19 @@ const move = function(){
     }
 }
 
-const unsneak = function(){
+const unsneakif = function(){
     if (event.keyCode == 40){
         sneakTrue = false
         AllowcatJump = true
     }
 }
+
+
+const unsneak = function(){
+    sneakTrue = false
+    AllowcatJump = true
+}
+
 
 
 let AllowcatJump = true
@@ -91,7 +97,36 @@ let frame = 1
 let position = 1
 
 window.addEventListener("keydown", move)
-window.addEventListener("keyup", unsneak)
+window.addEventListener("keyup", unsneakif)
+
+window.addEventListener("contextmenu", function(){
+    return false
+})
+
+
+window.addEventListener("click", function(){
+    jump()
+})
+window.addEventListener("mousedown", function(e){
+    switch(e.button){
+        case 0:
+            break;
+        case 2:
+            console.log("sneak")
+            sneak()
+            break;
+    }
+}, false)
+window.addEventListener("mouseup", function(e){
+    switch(e.button){
+        case 0:
+            break;
+        case 2:
+            console.log("unsneak")
+            unsneak()
+            break;
+    }
+}, false)
 
 const Catanimation = function(){
     if (gameOver){
