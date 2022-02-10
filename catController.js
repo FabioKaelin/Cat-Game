@@ -7,9 +7,11 @@ function CatJump(flowCounter) {
         cat.style.bottom = (catY + "%")
         catY++;
         catY++;
-        if (catY < 60) {
+        if (sneakTrue) {
+            CatJumpdown()
+        } else if(catY < 60){
             CatJump(flowCounter);
-        } else {
+        }else {
             CatJumpflow()
             // break;
         }
@@ -32,6 +34,9 @@ function CatJumpdown() {
         cat.style.bottom = (catY + "%")
         catY--;
         catY--;
+        if(sneakTrue){
+            catY--
+        }
         if (catY >= 0) {
             CatJumpdown();
         } else {
