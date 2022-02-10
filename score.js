@@ -3,6 +3,7 @@ let scores = document.getElementById("Score")
 
 function score() {
     if (gameOver){
+        document.body.style.backgroundColor = "#ff6666"
         return
     }
     setTimeout(function(){
