@@ -28,7 +28,7 @@ function spawnBush(bushXArray, bushNumber, bushs){
     }
 
     setTimeout(function(){
-        if (Math.floor(Math.random() * 10) < 8){
+        if (Math.floor(Math.random() * 10) < 9){
             bushXArray[bushNumber] = 95;
             moveBush(bushXArray[bushNumber], bushNumber, bushs)
             bushNumber++

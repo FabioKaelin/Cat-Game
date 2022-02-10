@@ -15,12 +15,12 @@ function movemaus(mausX, Currentmaus, mauss) {
     setTimeout(function() {
         mauss[Currentmaus].style.left = (mausX + "%")
         if (mausX > -5) {
-            mausX -= 0.2;
+            mausX -= 1;
             movemaus(mausX, Currentmaus, mauss);
         } else {
             mauss[Currentmaus].style.display = "none";
         }
-    }, 2)
+    }, 20)
 }
 function spawnmaus(mausXArray, mausNumber, mauss){
     if(gameOver){
@@ -30,7 +30,7 @@ function spawnmaus(mausXArray, mausNumber, mauss){
     setTimeout(function(){
         if (Math.floor(Math.random() * 10) < 4){
             mausXArray[mausNumber] = 95;
-            mauss[Currentmaus].style.display = "block"
+            mauss[mausNumber].style.display = "block"
             movemaus(mausXArray[mausNumber], mausNumber, mauss)
             mausNumber++
             if(mausNumber == 3){
@@ -43,7 +43,7 @@ function spawnmaus(mausXArray, mausNumber, mauss){
 }
 
 function RanomTime() {
-    number = (Math.random() + 1)* 1000
+    number = (Math.random() + 1)* 2000
     return number
 }
 function DelayStart() {
