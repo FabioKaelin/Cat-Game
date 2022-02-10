@@ -85,7 +85,7 @@ let position = 1
 window.addEventListener("keydown", move)
 window.addEventListener("keyup", unsneak)
 
-const animation = function(){
+const Catanimation = function(){
     if (gameOver){
         window.removeEventListener("keydown", move)
         window.removeEventListener("keyup", unsneak)
@@ -125,7 +125,7 @@ const animation = function(){
                 }
             }
         }
-        animation()
+        Catanimation()
     }, 2)
 }
-animation()
+Catanimation()
