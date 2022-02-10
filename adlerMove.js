@@ -53,7 +53,7 @@ function DelayStart() {
 
     setTimeout(function(){
         spawnadler(adlerXArray, adlerNumber, adlers)
-    },1000)
+    },52000)
 }
 
 DelayStart()
