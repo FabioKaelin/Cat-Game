@@ -6,10 +6,9 @@ let spatzXArray = []
 
 function movespatz(spatzX, Currentspatz, spatzs, spatzY) {
     spatzs[Currentspatz].style.left = spatzX
-    spatzs[Currentspatz].style.display = "block"
     if((spatzX < 10 && spatzX > 2) && (catY > (100-spatzY)-20 /*-((sneakTrue + 1)*20)*/ && catY < (100-spatzY))){
         spatzBonus = true
-        spatzs.style.display = "none";
+        spatzs[Currentspatz].style.display = "none";
     }
     if(gameOver){
         return
@@ -17,7 +16,7 @@ function movespatz(spatzX, Currentspatz, spatzs, spatzY) {
     setTimeout(function() {
         spatzs[Currentspatz].style.left = (spatzX + "%")
         if (spatzX > -5) {
-            spatzX -= 0.2;
+            spatzX -= 0.3;
             movespatz(spatzX, Currentspatz, spatzs, spatzY);
         } else {
             spatzs[Currentspatz].style.display = "none";
@@ -30,10 +29,11 @@ function spawnspatz(spatzXArray, spatzNumber, spatzs){
     }
 
     setTimeout(function(){
-        if (Math.floor(Math.random() * 20) < 19){
+        if (Math.floor(Math.random() * 20) < 6){
             spatzXArray[spatzNumber] = 95;
             let spatzY = Math.floor(Math.random() * 75)
             spatzs[spatzNumber].style.top = `${spatzY}%`
+            spatzs[spatzNumber].style.display = "block"
             movespatz(spatzXArray[spatzNumber], spatzNumber, spatzs, spatzY)
             spatzNumber++
             if(spatzNumber == 3){
@@ -46,7 +46,7 @@ function spawnspatz(spatzXArray, spatzNumber, spatzs){
 }
 
 function RanomTime() {
-    number = (Math.random() + 1)* 3000
+    number = (Math.random() + 1)* 4000
     return number
 }
 function DelayStartSpatz() {

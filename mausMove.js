@@ -5,8 +5,8 @@ let mausXArray = []
 
 function movemaus(mausX, Currentmaus, mauss) {
     mauss[Currentmaus].style.left = mausX
-    mauss[Currentmaus].style.display = "block"
     if((mausX < 10 && mausX > 2) && (catY < 10)){
+        mauss[Currentmaus].style.display = "none"
         mausBonus = true
     }
     if(gameOver){
@@ -15,7 +15,7 @@ function movemaus(mausX, Currentmaus, mauss) {
     setTimeout(function() {
         mauss[Currentmaus].style.left = (mausX + "%")
         if (mausX > -5) {
-            mausX -= 0.5;
+            mausX -= 0.2;
             movemaus(mausX, Currentmaus, mauss);
         } else {
             mauss[Currentmaus].style.display = "none";
@@ -28,8 +28,9 @@ function spawnmaus(mausXArray, mausNumber, mauss){
     }
 
     setTimeout(function(){
-        if (Math.floor(Math.random() * 10) < 8){
+        if (Math.floor(Math.random() * 10) < 4){
             mausXArray[mausNumber] = 95;
+            mauss[Currentmaus].style.display = "block"
             movemaus(mausXArray[mausNumber], mausNumber, mauss)
             mausNumber++
             if(mausNumber == 3){
