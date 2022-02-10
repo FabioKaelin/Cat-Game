@@ -6,13 +6,13 @@ sun.style.display = "none"
 mond.style.display = "none"
 let night = false;
 
-let xcords0 = Math.floor(Math.random() * 2400);
-let xcords1 = Math.floor(Math.random() * 2400);
-let xcords2 = Math.floor(Math.random() * 2400);
-let xcords3 = Math.floor(Math.random() * 2400);
-let xcords4 = Math.floor(Math.random() * 2400);
-let xcords5 = Math.floor(Math.random() * 2400);
-let xcords6 = Math.floor(Math.random() * 2400);
+let xcords0 = Math.floor(Math.random() * 2700);
+let xcords1 = Math.floor(Math.random() * 2700);
+let xcords2 = Math.floor(Math.random() * 2700);
+let xcords3 = Math.floor(Math.random() * 2700);
+let xcords4 = Math.floor(Math.random() * 2700);
+let xcords5 = Math.floor(Math.random() * 2700);
+let xcords6 = Math.floor(Math.random() * 2700);
 
 
 let t = 0;
@@ -40,26 +40,26 @@ function zyklus() {
                 stars[5].style.left = `${0.035 * xcords5}%`
                 stars[6].style.left = `${0.035 * xcords6}%`
 
-                if(xcords0 > 2500){
-                    xcords0 = 0
+                if(xcords0 > 2750){
+                    xcords0 = -200
                 }
-                if(xcords1 > 2500){
-                    xcords1 = 0
+                if(xcords1 > 2750){
+                    xcords1 = -200
                 }
-                if(xcords2 > 2500){
-                    xcords2 = 0
+                if(xcords2 > 2750){
+                    xcords2 = -200
                 }
-                if(xcords3 > 2500){
-                    xcords3 = 0
+                if(xcords3 > 2750){
+                    xcords3 = -200
                 }
-                if(xcords4 > 2500){
-                    xcords4 = 0
+                if(xcords4 > 2750){
+                    xcords4 = -200
                 }
-                if(xcords5 > 2500){
-                    xcords5 = 0
+                if(xcords5 > 2750){
+                    xcords5 = -200
                 }
-                if(xcords6 > 2500){
-                    xcords6 = 0
+                if(xcords6 > 2750){
+                    xcords6 = -200
                 }
 
                 stars[0].style.display = "block"
