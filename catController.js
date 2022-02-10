@@ -82,13 +82,6 @@ const unsneakif = function(){
 }
 
 
-const unsneak = function(){
-    sneakTrue = false
-    AllowcatJump = true
-}
-
-
-
 let AllowcatJump = true
 let cat = document.getElementById("cat")
 // let sneakTrue = false
@@ -98,35 +91,6 @@ let position = 1
 
 window.addEventListener("keydown", move)
 window.addEventListener("keyup", unsneakif)
-
-window.addEventListener("contextmenu", function(){
-    return false
-})
-
-
-window.addEventListener("click", function(){
-    jump()
-})
-window.addEventListener("mousedown", function(e){
-    switch(e.button){
-        case 0:
-            break;
-        case 2:
-            console.log("sneak")
-            sneak()
-            break;
-    }
-}, false)
-window.addEventListener("mouseup", function(e){
-    switch(e.button){
-        case 0:
-            break;
-        case 2:
-            console.log("unsneak")
-            unsneak()
-            break;
-    }
-}, false)
 
 const Catanimation = function(){
     if (gameOver){
