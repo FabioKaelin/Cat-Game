@@ -6,25 +6,16 @@ sun.style.display = "none"
 mond.style.display = "none"
 let night = false;
 
-function xcords() {
-    xcords0 = Math.floor(Math.random() * 2000);
-    xcords1 = Math.floor(Math.random() * 2000);
-    xcords2 = Math.floor(Math.random() * 2000);
-    xcords3 = Math.floor(Math.random() * 2000);
-    xcords4 = Math.floor(Math.random() * 2000);
-    xcords5 = Math.floor(Math.random() * 2000);
-    xcords6 = Math.floor(Math.random() * 2000);
-    setTimeout(function() {
-        xcords0 = Math.floor(Math.random() * 2000);
-        xcords1 = Math.floor(Math.random() * 2000);
-        xcords2 = Math.floor(Math.random() * 2000);
-        xcords3 = Math.floor(Math.random() * 2000);
-        xcords4 = Math.floor(Math.random() * 2000);
-        xcords5 = Math.floor(Math.random() * 2000);
-        xcords6 = Math.floor(Math.random() * 2000);
-    }, 50000)
 
-}
+
+
+let xcords0 = Math.floor(Math.random() * 2400);
+let xcords1 = Math.floor(Math.random() * 2400);
+let xcords2 = Math.floor(Math.random() * 2400);
+let xcords3 = Math.floor(Math.random() * 2400);
+let xcords4 = Math.floor(Math.random() * 2400);
+let xcords5 = Math.floor(Math.random() * 2400);
+let xcords6 = Math.floor(Math.random() * 2400);
 
 
 let t = 0;
@@ -35,15 +26,15 @@ function zyklus() {
     setTimeout(function() {
         if (t < 5000) {
             t++;
-            xcords0++
-            xcords1++
-            xcords2++
-            xcords3++
-            xcords4++
-            xcords5++
-            xcords6++
             if (t < 2500) {
                 night = true;
+                xcords0 += 0.5
+                xcords1 += 0.8
+                xcords2 += 0.6
+                xcords3 += 0.5
+                xcords4 += 0.3
+                xcords5 += 0.7
+                xcords6 += 0.5
                 stars[0].style.left = `${0.035 * xcords0}%`
                 stars[1].style.left = `${0.035 * xcords1}%`
                 stars[2].style.left = `${0.035 * xcords2}%`

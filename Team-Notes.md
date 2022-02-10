@@ -7,8 +7,6 @@ Katzen-Farbwechsel:
 
 ## Donnerstag
 
-Hitboxe Adler
-2 Nacht Sterne
 Schneller fallen bei Sneaken
 Wenn man Stribt [Leertaste] und es wird Restartet
 
