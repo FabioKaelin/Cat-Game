@@ -22,8 +22,8 @@ function xcords() {
         xcords4 = Math.floor(Math.random() * 2000);
         xcords5 = Math.floor(Math.random() * 2000);
         xcords6 = Math.floor(Math.random() * 2000);
+        xcords()
     }, 50000)
-
 }
 
 
