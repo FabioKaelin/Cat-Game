@@ -5,18 +5,17 @@ var spatzBonus = false
 var mausBonus = false
 var gamespeed = 1
 
+
 function CatJump(flowCounter) {
     setTimeout(function() {
         cat.style.bottom = (catY + "%")
-        catY++;
-        catY++;
+        catY += 2
         if (sneakTrue) {
             CatJumpdown()
         } else if(catY < 60){
             CatJump(flowCounter);
         }else {
             CatJumpflow()
-            // break;
         }
     }, 5/gamespeed)
 }
@@ -86,11 +85,13 @@ let AllowcatJump = true
 let cat = document.getElementById("cat")
 // let sneakTrue = false
 cat.style.bottom = "2%"
-let frame = 1
-let position = 1
 
 window.addEventListener("keydown", move)
 window.addEventListener("keyup", unsneakif)
+
+
+let frame = 0
+let position1 = true
 
 const Catanimation = function(){
     if (gameOver){
@@ -99,38 +100,23 @@ const Catanimation = function(){
         return
     }
     setTimeout(function() {
+        frame++
         if (sneakTrue) {
-            if (position == 1){
+            if (position1){
                 cat.src = "./character/Cat/cat-walk-sneak2.png"
-                frame++
-                if (frame > 12){
-                    frame = 0
-                    position = 2
-                }
             } else {
                 cat.src = "./character/Cat/cat-walk-sneak1.png"
-                frame++
-                if (frame > 12){
-                    frame = 0
-                    position = 1
-                }
             }
         } else {
-            if (position == 1){
+            if (position1){
                 cat.src = "./character/Cat/cat-walk2.png"
-                frame++
-                if (frame > 12){
-                    frame = 0
-                    position = 2
-                }
             } else {
                 cat.src = "./character/Cat/cat-walk1.png"
-                frame++
-                if (frame > 12){
-                    frame = 0
-                    position = 1
-                }
             }
+        }
+        if(frame > 12){
+            frame = 0
+            position1 = !position1
         }
         Catanimation()
     }, 10/gamespeed)

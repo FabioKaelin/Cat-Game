@@ -69,8 +69,6 @@ let AdlerPosition2 = 1
 let adler2 = document.getElementById("adler2")
 const AdlerAnimation0 = function(){
     if (gameOver){
-        window.removeEventListener("keydown", move)
-        window.removeEventListener("keyup", unsneak)
         return
     }
     setTimeout(function() {
@@ -94,8 +92,6 @@ const AdlerAnimation0 = function(){
 }
 const AdlerAnimation1 = function(){
     if (gameOver){
-        window.removeEventListener("keydown", move)
-        window.removeEventListener("keyup", unsneak)
         return
     }
     setTimeout(function() {
@@ -119,8 +115,6 @@ const AdlerAnimation1 = function(){
 }
 const AdlerAnimation2 = function(){
     if (gameOver){
-        window.removeEventListener("keydown", move)
-        window.removeEventListener("keyup", unsneak)
         return
     }
     setTimeout(function() {

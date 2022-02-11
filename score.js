@@ -1,4 +1,4 @@
-let x = 1;
+let x = 0;
 let scores = document.getElementById("Score")
 
 function score() {
@@ -8,12 +8,9 @@ function score() {
     }
     setTimeout(function(){
         x++ ;
-        if(spatzBonus){
+        if(spatzBonus || mausBonus){
             x += 30
             spatzBonus = false
-        }
-        if(mausBonus){
-            x += 30
             mausBonus = false
         }
         gamespeed += 0.0005
@@ -24,3 +21,5 @@ function score() {
 }
 
 score();
+
+

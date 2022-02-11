@@ -49,8 +49,9 @@ function RanomTime() {
     number = (Math.random() + 1)* 4000 / gamespeed
     return number
 }
-function DelayStartSpatz() {
 
+
+function DelayStartSpatz() {
     setTimeout(function(){
         spawnspatz(spatzXArray, spatzNumber, spatzs)
     },35000)
@@ -71,8 +72,6 @@ let spatzPosition2 = 1
 let spatz2 = document.getElementById("spatz2")
 const spatzAnimation0 = function(){
     if (gameOver){
-        window.removeEventListener("keydown", move)
-        window.removeEventListener("keyup", unsneak)
         return
     }
     setTimeout(function() {
@@ -96,8 +95,6 @@ const spatzAnimation0 = function(){
 }
 const spatzAnimation1 = function(){
     if (gameOver){
-        window.removeEventListener("keydown", move)
-        window.removeEventListener("keyup", unsneak)
         return
     }
     setTimeout(function() {
@@ -121,8 +118,6 @@ const spatzAnimation1 = function(){
 }
 const spatzAnimation2 = function(){
     if (gameOver){
-        window.removeEventListener("keydown", move)
-        window.removeEventListener("keyup", unsneak)
         return
     }
     setTimeout(function() {
