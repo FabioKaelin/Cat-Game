@@ -1,0 +1,52 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: catgame-deploy
+spec:
+  selector:
+    matchLabels:
+      app: catgame-deploy
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: catgame-deploy
+    spec:
+      containers:
+      - name: catgame-deploy
+        image: ghcr.io/fabiokaelin/catgame:latest
+        env:
+
+        ports:
+        - containerPort: 80
+      imagePullSecrets:
+      - name: regcred
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: catgame-service
+spec:
+  selector:
+    app: catgame-deploy
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: catgame-ingress
+spec:
+  rules:
+    - host: catgame.fabkli.ch
+      http:
+        paths:
+        - path: /
+          pathType: Prefix
+          backend:
+            service:
+              name: catgame-service
+              port:
+                number: 80

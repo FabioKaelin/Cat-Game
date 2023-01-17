@@ -1,0 +1,10 @@
+{
+    "replicas": 1,
+    "name": "catgame",
+    "port": 80,
+    "path": "/",
+    "website": "catgame.fabkli.ch"
+    // "env":[
+    //     {"name": "env1", "value": "valenv1ue"}
+    // ]
+}
